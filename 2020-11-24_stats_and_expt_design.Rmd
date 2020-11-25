@@ -1,6 +1,6 @@
 ---
 title: "[Mix] models 🙄 🤨 "
-# subtitle: "Never let statistics get in the way of a good experiment."
+subtitle: "Never let statistics get in the way of a good experiment."
 date: "2020/11/24"
 output:
   xaringan::moon_reader:
