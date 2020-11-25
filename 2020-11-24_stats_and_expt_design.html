@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>[Mix] models 🙄 🤨</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="ubuntu-headers-and-extra-classes.css" type="text/css" />
+    <link rel="stylesheet" href="libs/remark-css/default.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# [Mix] models 🙄 🤨
+## Never let statistics get in the way of a good experiment.
+### 2020/11/24
+
+---
+
+
+
+class:inverse
+
+# Topics
+
+.extrabigger[
+- Experiment priorities
+
+
+- Statistics / design
+
+
+- IP / licensing ]
+
+---
+
+class: inverse
+
+# Ultimate goals
+.bigger[
+- Predict performance of any mix....**even those we haven't tested**
+
+- **"Recreational" mixes:**
+  - upper boundary of % sand governed by ability to _ever_ achieve "cleat-in, cleat-out" effect...._c.f. nonplastic_
+
+- **"Pro" mixes:**
+  - lower boundary of % sand governed by ability to work/groom the soil....can't make it too "clayey" (i.e. strong) when dry.
+
+- Once possible mixes known....what are their acceptable &amp;Delta;H&lt;sub&gt;2&lt;/sub&gt;O?]
+    
+    
+???
+
+    - In other words, we can tell you what your target mixes should be based on maintenance level and also once you've made them we know how they will perform compared to other sorts of mixes. 
+
+
+---
+
+class: inverse
+# Questions to answer 
+.bigger[
+- How does "clay type" affect performance?
+  - related: do different clays need the same sand % ?
+
+
+- Is SCR the right predictor of actual performance?
+
+
+- How does the nature of the sand affect behavior of the mix?
+
+
+- Can the mix properties be fine-tuned by using 3 components instead of 2?
+
+]
+
+---
+class: inverse
+# 4 experiments to answer those questions:
+
+.bigger[
+- How does "clay type" interact with added sand?
+  
+  -  "Clay type" x varying sand %
+
+
+- Is SCR the right predictor of actual performance?
+  
+  - Silt **:** clay ratio @ same sand content &amp; type
+  
+- How does the nature of the sand affect the bulk mix performance?
+
+  - Sand properties experiment
+  
+- Can the mix properties be fine-tuned by using 3 components instead of 2?
+
+  - Clay mixtures (the "secret sauce")
+  ]
+
+---
+class: inverse
+# Experiment 1 - Foundation 
+
+.extrabigger[Question: What's the interaction between clay toughness/clay minerals and sand % ?]
+
+.bigger[Hypotheses: 
+
+- Tougher clays need more sand to "dillute" them
+- the ratios needed to make a mix with "recreational properties" vs. "professional properties" will not always be 70 % and 60 % sand...sometimes more, sometimes less]
+
+.bigger[- Different kinds of clay mixed with the same sand but in different sand %.
+
+- These are the two most important things so I want to test it first. 
+]
+
+---
+class: inverse
+# Experiment 1 - Anticipate thresholds 
+
+![](choosing_sand_pcts_to_test.svg)&lt;!-- --&gt;
+
+???
+
+Need to cluster the data points around the transitional fines content. Most of the change happens around this point, but the number is different for every combination of sand-clay. More uniform sands will need more clay+water to fill their pores completely, and tougher clays will need more sand to render them non-plastic. 
+
+---
+class: inverse
+# Experiment 1 - Choose clays wisely
+.bigger[
+- Span toughness spectrum so to allow predictions about soils we did not test 
+
+- Pick 4 clays w/ varying toughness:
+ 1. Ultisol (kaolin/sesquioxides)
+ 2. Shale/common brick clay (illite-smectite)
+ 3. Pure, fine-grained kaolin
+ 4. Ca-bentonite
+ 
+- Maximum toughness of these _roughly_ correspond to 10, 20, 30, 50 kJ/m&lt;sup&gt;-3&lt;/sup&gt; 
+  - gives **&amp;approx;** equal spacing from lowest to highest encountered toughness 
+   
+- **1** sand type  x  **12** sand percents  x  **4** "base" clays  = **48 mixes; ~12 weeks**
+]
+
+---
+class: inverse
+# Experiment 2 - Silt-to-clay Ratio vs clay minerals
+
+.extrabigger[Question: Is SCR the right thing to measure?]
+
+.bigger[
+
+**SCR concept assertion:** 
+"Adding silt-size particles to a soil with low SCR (&lt;0.5) will improve its performance."
+
+**Hypothesis:**  
+Adding silt will make this soil _worse_. It's not only the clay-size particles that matter. Low-activity clay is no good to work with.
+
+- What predicts performance? SCR | XRD | Atterberg lims | **toughness test**
+
+- **1** sand percent  x  **4** "base" clays  x  **5** SCR = **20 mixes; ~5 weeks**
+
+]
+
+---
+class: inverse 
+# Experiment 2 - Silt-to-clay Ratio vs clay minerals
+
+![](2020-11-24_stats_and_expt_design_files/figure-html/unnamed-chunk-2-1.png)&lt;!-- --&gt;
+
+
+- Won't find 2 soils with identical SCR.....have to make it yourself
+
+- Add 325 mesh ground silica to the 4 clays from Expt. 1 to make 20 new "clays"...with SCR of SCR&lt;sub&gt;min&lt;/sub&gt;, 0.5, 1, 3, 6
+
+
+---
+class: inverse 
+
+# Experiment 3 - Sand properties
+
+.extrabigger[Question: how do sand size and uniformity affect mix performance?]
+
+Hypotheses:
+
+- effect sizes: size &gt; uniformity &gt; shape
+
+- best-performing will be very coarse, very uniform, round
+  - allows clay to perform "unimpeded"
+  - doubtful whether angularity is important...instead of including here, do a side-study with Atterberg limits. Add later if time permits.
+
+- Pick 3 sands w/ similar uniformity:
+ 1. "fine" (D&lt;sub&gt;50&lt;/sub&gt;&amp;approx;250 &amp;mu;)
+ 2. "medium" (D&lt;sub&gt;50&lt;/sub&gt;&amp;approx;500 &amp;mu;)
+ 3. "coarse" (D&lt;sub&gt;50&lt;/sub&gt;&amp;approx;1000 &amp;mu;)
+ 
+- Plus 1 sands with similar D&lt;sub&gt;50&lt;/sub&gt; to sand (2) above, but different C&lt;sub&gt;u&lt;/sub&gt;
+ 
+- only 1 clay to start...isolate effect of sand w/o testing interaction 
+
+- **1** clay  x  **4** sands  x  **5** sand percents = **20 mixes; &amp;approx;5 weeks**
+ 
+---
+
+class: inverse 
+
+# Experiment 4 - Model validataion and artificial clay mixtures
+
+.bigger[Question: What can be done if only poor-performing clay is available locally?]
+
+Hypotheses:
+
+- poor-performing clay can be "rescued" via small additions of another clay
+
+- Mix performance can be predicted from clay toughness and sand properties
+
+Methodology: 
+- choose worst-performing clay from Experiment 1
+  - beneficiate with small amounts of Na-bentonite, THEN mix with sand
+
+- 5 sand contents, 1 sand types
+
+- **1** clays  x  **5** bentonite ratios  x  **5** sand percents = **25 mixes; ~ 7 weeks**
+ 
+---
+
+class: inverse
+# Stats - philosophy vs. real life
+
+.bigger[
+- Can't test everything x everything 
+
+- Predict, not evaluate
+
+- ANCOVA, not ANOVA; slopes &amp; intercepts, not multiple comparisons
+
+&lt;brk/&gt;
+
+.center[**The ultimate model:**]]
+.bigger[
+`$$Mix~performance~=\\~clay~toughness~+~sand~\%~+~sand~size~+sand~uniformity$$` ]
+
+???
+
+    - in a perfect world we would test every kind of clay with every kind of sand in every ratio and at every water content
+
+    - need to split these up into separate experiments
+
+    - the primary interest is not pointing out what "treatment" is the best. It is knowing quantitatively what the response variable is based on model inputs (clay toughness, sand %, sand uniformity, sand size). 
+
+    - it is regression, not ANOVA.... but have to account for possible nuisance variables, so it becomes ANCOVA
+
+    - the philosophical problem I am up against is re-using the cylinders because they are technically not separate experimental units. 
+
+---
+
+class: inverse
+# Nuisance variables 
+.bigger[
+- the two nuisance variables are replicate (cylinder) and day. These should both be treated as random effects, while water content should be treated as a fixed effect. 
+
+- Kind of the opposite of what's normally done in a field trial; water content might be run as a covariate because it is a nuisance variable to your treatments; in this case the treatments are the nuisance variables. 
+
+- split-plot in time? 
+]
+
+---
+
+# Experimental design
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Error terms for fixed and random effects.&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Variable &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Class &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; N &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Degrees of Freedom &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Sand % &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fixed &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Clay toughness &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fixed &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Water content &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fixed &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Block &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; random &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Day &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; random &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Residual error &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; NA &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 423 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; 432 &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; 431 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+# Time frame 
+
+
+&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:center;"&gt; Experiment &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Description &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; # of mixes &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; # of samples &lt;/th&gt;
+   &lt;th style="text-align:center;"&gt; Estimated time (wk) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Clay type x sand % &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 48 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 144 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Same SCR for different clay minerals &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Sand properties x sand % &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 20 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 60 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 5 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Inventing new 3-way mixtures &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 25 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 75 &lt;/td&gt;
+   &lt;td style="text-align:center;"&gt; 6 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:left;font-weight: bold;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; 113 &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; 339 &lt;/td&gt;
+   &lt;td style="text-align:center;font-weight: bold;"&gt; 28 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
